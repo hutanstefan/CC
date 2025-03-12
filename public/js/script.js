@@ -3,7 +3,7 @@ import fs from 'fs';
 import url from 'url';
 
 const DATA_FILE = 'data.json';
-const message = 'Available routes are: GET /items, GET /item/:id, POST /item, PUT /item/:id, DELETE /item/:id';
+const message = 'Available routes are: GET /items , GET /item/:id , POST /item , PUT /item/:id , DELETE /item/:id';
 
 function readData() {
     if (!fs.existsSync(DATA_FILE)) return [];
