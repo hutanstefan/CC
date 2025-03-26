@@ -1,9 +1,61 @@
 ### CC - Hutan Stefan
 
-## Homework1
+## Homework 1
 
-The script for this project can be found in the following location:
-public/js/script.js
+The script for this project can be found in the following location:  
+`public/js/script.js`
+
+---
+
+## Homework 2 – Laravel + API Integration
+
+În această temă am realizat o aplicație Laravel care combină mai multe funcționalități într-o singură pagină (`resources/views/homework2.blade.php`):
+
+### 🔢 1. Random Number Generator (API: Random.org)
+- Utilizatorul poate introduce un interval (Min, Max)
+- Se generează un număr aleatoriu folosind [random.org API](https://api.random.org)
+- Este folosit un controller dedicat: `RandomNumberController.php`
+
+### 📰 2. Căutare știri (API: NewsAPI.org)
+- Utilizatorul poate introduce un cuvânt cheie
+- Sunt afișate cele mai noi 5 știri relevante
+- API folosit: [https://newsapi.org](https://newsapi.org)
+- Controller dedicat: `NewsController.php`
+
+### 🔧 3. Conectare cu server Node.js custom (CRUD API)
+- Am construit un server `Node.js` cu `http` + `fs`, fără Express
+- Operații suportate:
+  - `GET /items` – Afișare toate itemele
+  - `GET /item/:id` – Afișare item după ID
+  - `POST /item` – Adăugare item nou
+  - `PUT /item/:id` – Modificare item
+  - `DELETE /item/:id` – Ștergere item
+- În frontend, există câte un **buton pentru fiecare acțiune**, cu inputuri dedicate
+- Răspunsurile sunt afișate în format JSON (`<pre>`)
+
+> ⚠️ A fost nevoie să adaug suport CORS în serverul Node.js pentru a permite request-uri cross-origin din Laravel (port 8000).
+
+---
+
+### 📁 Structură fișiere relevante
+
+- `resources/views/homework2.blade.php` – Interfața principală
+- `routes/web.php` – Rutele pentru controlerele Laravel
+- `app/Http/Controllers/RandomNumberController.php` – API Random.org
+- `app/Http/Controllers/NewsController.php` – API NewsAPI
+- `server.js` – Server Node.js custom cu logică CRUD și JSON file storage
+
+---
+
+### 🧪 Tehnologii folosite
+
+- Laravel 10+
+- Blade
+- jQuery (pentru AJAX)
+- Node.js (fără Express)
+- API-uri externe: random.org, newsapi.org
+
+---
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
